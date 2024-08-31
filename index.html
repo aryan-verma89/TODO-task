@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List- ShipGlobal Task</h1>
+        <div class="add-task">
+            <input type="text" id="task-input" placeholder="Add a new task">
+            <button id="add-task-btn">Add Task</button>
+        </div>
+        <div class="task-container">
+            <div class="task-column" id="backlog">
+                <h2>Backlog</h2>
+                <ul class="task-list" id="backlog-list"></ul>
+            </div>
+            <div class="task-column" id="todo">
+                <h2>To-Do</h2>
+                <ul class="task-list" id="todo-list"></ul>
+            </div>
+            <div class="task-column" id="ongoing">
+                <h2>Ongoing</h2>
+                <ul class="task-list" id="ongoing-list"></ul>
+            </div>
+            <div class="task-column" id="done">
+                <h2>Done</h2>
+                <ul class="task-list" id="done-list"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
