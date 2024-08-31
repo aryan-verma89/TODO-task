@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.add-task {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#task-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 70%;
+    margin-right: 10px;
+}
+
+#add-task-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#add-task-btn:hover {
+    background-color: #0056b3;
+}
+
+.task-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Scroll horizontally if columns overflow */
+}
+
+.task-column {
+    width: 22%;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 400px; /* Fixed height for each column */
+    overflow-y: auto; /* Scroll vertically if content overflows */
+    overflow-x: hidden; /* Prevent horizontal scroll within columns */
+    margin-right: 10px; /* Space between columns */
+    position: relative;
+}
+
+.task-column:last-child {
+    margin-right: 0; /* Remove margin for the last column */
+}
+
+.task-column h2 {
+    font-size: 18px;
+    color: #333;
+    margin-top: 0;
+}
+
+.task-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-list li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-list .move-button {
+    background-color: #e9ecef; /* Neutral background color */
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.task-list .move-button.active {
+    background-color: #28a745; /* Green for active buttons */
+    color: white;
+}
+
+.task-list .move-button.inactive {
+    background-color: #ccc; /* Gray for inactive buttons */
+}
+
+.task-list .move-button:hover:not(.inactive) {
+    background-color: #218838; /* Darker green for hover on active button */
+    transform: scale(1.1);
+}
+
+.button-disabled {
+    background-color: #ccc;
+    border-color: #ccc;
+    cursor: not-allowed;
+}
+
+.button-disabled:hover {
+    background-color: #ccc;
+}
